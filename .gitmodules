@@ -1,0 +1,21 @@
+[submodule "api-gateway"]
+	path = api-gateway
+	url = https://github.com/Drebo2324/microservice-apiGateway
+[submodule "product-service"]
+	path = product-service
+	url = https://github.com/Drebo2324/microservice-productService
+[submodule "order-service"]
+	path = order-service
+	url = https://github.com/Drebo2324/microservice-orderService
+[submodule "inventory-service"]
+	path = inventory-service
+	url = https://github.com/Drebo2324/microservice-inventoryService
+[submodule "notification-service"]
+	path = notification-service
+	url = https://github.com/Drebo2324/microservice-notificationService
+[submodule "kubernetes"]
+	path = kubernetes
+	url = https://github.com/Drebo2324/microservice-kubernetes
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Drebo2324/microservice-ui
