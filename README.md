@@ -18,6 +18,7 @@ API-Gateway / Product Service / Order Service / Inventory Service / Notification
 - Testcontainers with Wiremock
 - REST Assured
 - Grafana Stack (Grafana, Loki, Tempo, Prometheus)
+- Docker
 - Kubernetes
 
 # Overview 
