@@ -5,16 +5,29 @@ Spring Boot 3 Microservices
 API-Gateway / Product Service / Order Service / Inventory Service / Notification Service / Frontend
 
 # Tech Stack
-- Spring Boot
+- Spring MVC
+- Spring Cloud
+- Spring Security
 - React
 - MongoDB
 - MySQL
 - Kafka
+- Zookeeper
+- Avro
 - Keycloak
 - Testcontainers with Wiremock
+- REST Assured
 - Grafana Stack (Grafana, Loki, Tempo, Prometheus)
-- API Gateway using Spring Cloud Gateway MVC
 - Kubernetes
+
+# Overview 
+This is a project that consists of 5 different microservices: The API Gateway, Product Service, Order Service, Inventory Service, and the Notification Service. This is a simple e-commerce application where users can order products fetched from the Product Service. This project utilizes the microservices architectural patterns using both synchronous and event-driven communication.  
+
+The API Gateway manages requests to the system. It uses Resilience4J to handle failures between service calls, and it uses Keycloak for security. The Product Service is where the frontend fetches the products from.  
+
+The Order Service makes service calls to both the Inventory Service (synchronous) and the Notification Service (asynchronous). Kafka is used as a message broker. Once the Order Service has checked the Inventory Service for stock, it sends the relevant order data to the Kafka Topic to be consumed by the Notification Service where it uses that data to generate order confirmation emails.  
+
+For Observability, the Grafana stack is used, implementing Prometheus for metrics collection, Loki for log aggregation, Tempo for distributed tracing, and Grafana to monitor it all. Kubernetes is used for deployment, service discovery, and load balancing. 
 
 # How to run frontend app
 > cd shop-front-ui
