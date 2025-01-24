@@ -20,6 +20,7 @@ API-Gateway / Product Service / Order Service / Inventory Service / Notification
 - Grafana Stack (Grafana, Loki, Tempo, Prometheus)
 - Docker
 - Kubernetes
+- Kind
 
 # Overview 
 This is a project that consists of 5 different microservices: The API Gateway, Product Service, Order Service, Inventory Service, and the Notification Service. This is a simple e-commerce application where users can order products fetched from the Product Service. This project utilizes the microservices architectural patterns using both synchronous and event-driven communication.  
